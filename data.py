@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 import csv
+import json
 
 # activate virtual env - .venv\Scripts\activate.bat
 
@@ -22,9 +23,13 @@ for line in tsv_file:
         # print(line[21])
 
 
-request = requests.get("https://clinicaltables.nlm.nih.gov/api/snps/v3/search", params={'terms': 'rs11571833'})
+request = requests.get("https://clinicaltables.nlm.nih.gov/api/snps/v3/search", params={'terms': 'rs16991615', 'maxList': 20})
 
-print(request)
+res = json.loads(request.text)
+
+print(res[3])
+
+
 
 # print(matching_data)
 
