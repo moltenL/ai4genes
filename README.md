@@ -1,0 +1,6 @@
+## Tasks:
+1. Given a list of genetic mutations, or ‘variants’, (“rsid”s) from the tables submitted by the other students, write code to retrieve from dbSNP the set of possible protein coding mutations implied by that variant (as well as the protein corresponding to those changes). ChatGPT can help you figure out which exact libraries can be used to extract data from dbSNP, but you need to check for accuracy.
+2. Given a list of protein names, for each protein, write code to retrieve the 1 or more protein sequences associated with that protein (this involves extending Gerald’s existing code).
+3. For a given protein, given its list of possible protein sequences (from (2)) and a list of possible amino acid changes for a given mutation (from (1)), generate all possible “mutated versions of the protein sequence”.
+4. Write code to produce a table (similar to what students should be doing for this week) that lists, for each mutation, the protein sequence ‘before’ and ‘after’ mutation.
+5. For the set of all proteins and their corresponding list of amino acid changes (from (1)), extend Gerald’s code that extracts data from “AlphaMissense”, a database of calculated/estimated “pathogenicity score” for each mutation and each protein. Rank mutations (and their proteins) in decreasing order of “pathogenicity”. Note that this item (5) doesn’t depends on items (2-4).
