@@ -13,7 +13,6 @@ def get_variation_info(rsID):
     if response.status_code == 200:
         data = response.json()
 
-
         # Extract relevant information from the response
         variations = []
         if 'primary_snapshot_data' in data:
@@ -24,7 +23,6 @@ def get_variation_info(rsID):
                         # position + 1 because all of the positions listed are off by 1
                         AAchange = actual_info['deleted_sequence']+str(actual_info['position']+1)+actual_info['inserted_sequence']
                         variations.append(AAchange)
-        
         return list(set(variations))
     else:
         print("Failed to fetch variation information.")
